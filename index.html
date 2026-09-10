@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CappuRPG | Boas ideias também são aventuras</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+    <!-- CSS do projeto -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+
+    <script src="js/firebase-config.js"></script>
+    <script defer src="js/main.js"></script>
+</head>
+<body>
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
+    <nav class="navbar-cappu">
+        <div class="navbar-container">
+
+            <!-- Logo -->
+
+            <a href="index.html" class="logo">
+                <span class="logo-gato">
+                    🐈‍⬛
+                </span>
+                <span>CappuRPG</span>
+            </a>
+
+            <!-- Menu -->
+
+            <div class="menu">
+                <a href="index.html" class="ativo">
+                    🏠 Início
+                </a>
+                <a href="explorar.html">
+                    Explorar
+                </a>
+                <a href="fichas.html">
+                    Fichas
+                </a>
+                <a href="comunidade.html">
+                    Comunidade
+                </a>
+            </div>
+
+            <!-- Ações -->
+
+            <div class="acoes-navbar">
+                <button class="icone-navbar" title="Pesquisar" onclick="window.location.href='explorar.html'">
+                    🔍
+                </button>
+
+                <button class="icone-navbar" title="Notificações">
+                    ♧
+                </button>
+
+                <!-- Botão administrador -->
+
+                <button class="btn btn-sm btn-outline-light d-none" id="btn-admin" onclick="window.location.href='admin.html'">
+                    Admin
+                </button>
+
+                <!-- Login -->
+
+                <button class="btn btn-sm btn-outline-light" id="btn-login" onclick="abrirLogin()">
+                    Entrar
+                </button>
+
+                <!-- Logout -->
+
+                <button class="btn btn-sm btn-outline-light d-none" id="btn-logout" onclick="logout()">
+                    Sair
+                </button>
+
+                <!-- Perfil -->
+
+                <a href="perfil.html" class="avatar" title="Meu perfil">
+                    🐈
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <section class="hero">
+
+        <!-- Elementos decorativos -->
+
+        <span class="estrela estrela-1">✦</span>
+        <span class="estrela estrela-2">✧</span>
+        <span class="estrela estrela-3">✦</span>
+        <span class="estrela estrela-4">✧</span>
+        <span class="estrela estrela-5">✦</span>
+        <span class="lua">☾</span>
+
+        <div class="hero-container">
+
+            <!-- Texto -->
+
+            <div class="hero-conteudo">
+                <h1 class="hero-titulo">
+                    Boas ideias<br>
+                    também são<br>
+                    <span>aventuras.</span>
+                </h1>
+
+                <p class="hero-texto">
+
+                    Um espaço para criar personagens,
+                    descobrir aventuras e compartilhar
+                    histórias incríveis de RPG de mesa.
+                </p>
+
+                <a
+                    href="explorar.html"
+                    class="btn-cappu">
+                    Explorar agora
+                    <span class="seta">
+                        →
+                    </span>
+                </a>
+              </div>
+
+            <!-- Ilustração -->
+
+            <div class="hero-ilustracao">
+                <div class="circulo-magico"></div>
+                <span class="gato-mago">
+                    🐈‍⬛
+                </span>
+                <span class="chapeu-mago">
+                    🎩
+                </span>
+                <span class="livro">
+                    📖
+                </span>
+                <span class="cafe">
+                    ☕
+                </span>
+                <span class="dado dado-1">
+                    🎲
+                </span>
+                <span class="dado dado-2">
+                    d20
+                </span>
+                <span class="dado dado-3">
+                    d8
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================
+         ATALHOS
+    ====================================================== -->
+
+    <section class="atalhos">
+        <div class="atalhos-container">
+
+            <!-- Fichas -->
+
+            <div class="atalho-card">
+                <div class="atalho-icone">
+                    📖
+                </div>
+                <h3>
+                    Crie suas fichas
+                </h3>
+                <p>
+                    Monte personagens únicos
+                    e prepare-se para sua próxima aventura.
+                </p>
+                <a href="fichas.html" class="atalho-link">
+                    Acessar fichas →
+                </a>
+            </div>
+
+            <!-- Aventuras -->
+
+            <div class="atalho-card">
+                <div class="atalho-icone">
+                    🧭
+                </div>
+                <h3>
+                    Explore aventuras
+                </h3>
+                <p>
+                    Encontre cenários, missões
+                    e ideias para suas próximas sessões.
+                </p>
+                <a
+                    href="explorar.html"
+                    class="atalho-link">
+                    Ver aventuras →
+                </a>
+            </div>
+
+            <!-- Comunidade -->
+
+            <div class="atalho-card">
+                <div class="atalho-icone">
+                    👥
+                </div>
+                <h3>
+                    Junte-se à comunidade
+                </h3>
+                <p>
+                    Compartilhe ideias, tire dúvidas
+                    e conheça outros jogadores.
+                </p>
+                <a href="comunidade.html" class="atalho-link">
+                    Entrar na comunidade →
+                </a>
+            </div>
+
+            <!-- Mundos -->
+
+            <div class="atalho-card">
+
+                <div class="atalho-icone">
+                    🎲
+                </div>
+                <h3>
+                    Descubra novos mundos
+                </h3>
+                <p>
+                    Seja você jogador ou mestre,
+                    sempre existe uma nova aventura.
+                </p>
+                <a
+                    href="explorar.html"
+                    class="atalho-link">
+                    Explorar tudo →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================
+         EM ALTA
+    ====================================================== -->
+
+    <section class="em-alta">
+        <div class="titulo-secao">
+            <div>
+                <h2>
+                    Em alta
+                </h2>
+                <p>
+                    Aventuras e fichas que estão chamando
+                    a atenção da comunidade.
+                </p>
+            </div>
+            <a
+                href="explorar.html"
+                class="ver-mais">
+                Ver mais →
+            </a>
+        </div>
+
+        <div class="aventuras-grid">
+
+            <!-- Card 1 -->
+
+            <article class="aventura-card">
+                <div class="aventura-imagem">
+                    🏰
+                    <span class="tag">
+                        Aventura
+                    </span>
+                </div>
+
+                <div class="aventura-conteudo">
+                    <h3>
+                        O Despertar de Valoria
+                    </h3>
+                    <p>
+                        Uma antiga profecia,
+                        um reino em perigo e
+                        heróis improváveis.
+                    </p>
+
+                    <div class="dados-card">
+                        <span>
+                            👥 124
+                        </span>
+                        <span>
+                            ★ 4.8
+                        </span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 2 -->
+
+            <article class="aventura-card">
+                <div class="aventura-imagem taverna">
+                    🍺
+                    <span class="tag">
+                        Aventura
+                    </span>
+                </div>
+
+                <div class="aventura-conteudo">
+                    <h3>
+                        O Mistério da Taverna
+                    </h3>
+                    <p>
+                        Uma noite aparentemente
+                        comum esconde um segredo.
+                    </p>
+
+                    <div class="dados-card">
+                        <span>
+                            👥 86
+                        </span>
+                        <span>
+                            ★ 4.6
+                        </span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 3 -->
+
+            <article class="aventura-card">
+                <div class="aventura-imagem floresta">
+                    🌲
+                    <span class="tag">
+                        Aventura
+                    </span>
+                </div>
+
+                <div class="aventura-conteudo">
+                    <h3>
+                        A Floresta Sussurrante
+                    </h3>
+                    <p>
+                        O que estava perdido,
+                        agora observa seus passos.
+                    </p>
+
+                    <div class="dados-card">
+                        <span>
+                            👥 97
+                        </span>
+                        <span>
+                            ★ 4.7
+                        </span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 4 -->
+
+            <article class="aventura-card">
+                <div class="aventura-imagem cidade">
+                    🏰
+                    <span class="tag">
+                        Cenário
+                    </span>
+                </div>
+                <div class="aventura-conteudo">
+                    <h3>
+                        A Cidade de Nuvemprata
+                    </h3>
+                    <p>
+                        Mistérios, intrigas e segredos
+                        escondidos entre as torres.
+                    </p>
+
+                    <div class="dados-card">
+                        <span>
+                            👥 73
+                        </span>
+                        <span>
+                            ★ 4.5
+                        </span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- =====================================================
+         CTA
+    ====================================================== -->
+
+    <section class="cta">
+        <h2>
+            Sua próxima aventura começa aqui.
+        </h2>
+        <p>
+            Crie seu personagem, encontre uma ideia
+            ou compartilhe aquela história que está
+            esperando para ser contada.
+        </p>
+
+        <a href="explorar.html" class="btn-cappu">
+            Começar a explorar
+            <span class="seta">
+                →
+            </span>
+        </a>
+    </section>
+
+    <!-- =====================================================
+         RODAPÉ
+    ====================================================== -->
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                🐈‍⬛ CappuRPG
+            </div>
+            <p class="footer-text">
+                Boas histórias, grandes aventuras. ☕🎲
+            </p>
+            <p class="footer-text">
+                © 2026 CappuRPG
+            </p>
+        </div>
+    </footer>
+
+    <!-- =====================================================
+         MODAL LOGIN / CADASTRO
+    ====================================================== -->
+
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <!-- Cabeçalho -->
+
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        ☕ Entrar no CappuRPG
+                    </h5>
+                    <button
+                        type="button"
+                        class="btn-close btn-close-white"
+                        data-bs-dismiss="modal">
+                    </button>
+                </div>
+
+                <!-- Corpo -->
+
+                <div class="modal-body">
+                    <p class="texto-login">
+                        Entre para salvar suas fichas,
+                        aventuras e participar da comunidade.
+                    </p>
+
+                    <!-- Login -->
+
+                    <input type="email" class="form-control mb-3" id="email" placeholder="Seu email">
+
+                    <input type="password" class="form-control mb-3" id="senha" placeholder="Sua senha">
+
+                    <button class="btn btn-login-cappu w-100" onclick="login()">
+                        Entrar
+                    </button>
+
+                    <div class="divisor">
+                        ou
+                    </div>
+
+                    <!-- Cadastro -->
+
+                    <input type="email" class="form-control mb-3" id="emailCadastro" placeholder="Email para cadastro">
+
+                    <input type="password" class="form-control mb-3" id="senhaCadastro" placeholder="Crie uma senha">
+                    <button class="btn btn-cadastro w-100" onclick="cadastrar()">
+                        Criar minha conta
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+    <!-- Função para abrir o login -->
+
+    <script>
+        function abrirLogin() {
+            const modalElement =
+                document.getElementById("loginModal");
+            const modal =
+                new bootstrap.Modal(modalElement);
+            modal.show();
+        }
+    </script>
+</body>
+</html>

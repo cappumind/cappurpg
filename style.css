@@ -1,0 +1,1001 @@
+/* =========================================================
+   VARIÁVEIS DA IDENTIDADE VISUAL
+========================================================= */
+
+:root {
+    --roxo-escuro: #281b3d;
+    --roxo: #5b3f8c;
+    --roxo-claro: #9b8ad0;
+    --lavanda: #b9a7d9;
+    --lavanda-clara: #e9e1f4;
+    --turquesa: #4ec6c1;
+    --turquesa-escura: #2aa9a5;
+    --creme: #f8ede2;
+    --creme-claro: #fffaf4;
+    --cafe: #6b4b3a;
+    --texto: #302342;
+    --texto-claro: #6f6380;
+    --branco: #ffffff;
+    --borda: #e1d4e8;
+    --sombra:
+        0 10px 30px rgba(40, 27, 61, 0.10);
+}
+
+/* =========================================================
+   CONFIGURAÇÕES GERAIS
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "DM Sans", sans-serif;
+    background: var(--creme-claro);
+    color: var(--texto);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar-cappu {
+    height: 72px;
+    background: var(--roxo-escuro);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow:
+        0 3px 15px rgba(0, 0, 0, 0.20);
+}
+
+.navbar-container {
+    height: 100%;
+    max-width: 1250px;
+    margin: auto;
+    padding: 0 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-family: "Playfair Display", serif;
+    font-size: 27px;
+    font-weight: 700;
+}
+
+.logo:hover {
+    color: white;
+}
+
+.logo-gato {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:
+        linear-gradient(
+            135deg,
+            var(--roxo),
+            #3b265e
+        );
+    border: 2px solid rgba(255,255,255,0.15);
+    font-size: 27px;
+}
+
+/* =========================================================
+   MENU
+========================================================= */
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+}
+
+.menu a {
+    color: #eee8f6;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+    padding: 25px 0;
+}
+
+.menu a:hover {
+    color: var(--turquesa);
+}
+
+.menu a.ativo {
+    color: white;
+}
+
+.menu a.ativo::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--turquesa);
+    border-radius:
+        10px 10px 0 0;
+}
+
+/* =========================================================
+   AÇÕES DA NAVBAR
+========================================================= */
+
+.acoes-navbar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.icone-navbar {
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.icone-navbar:hover {
+    background:
+        rgba(255,255,255,0.10);
+    color: var(--turquesa);
+}
+
+.avatar {
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--lavanda);
+    color: var(--roxo-escuro);
+    font-weight: 700;
+    font-size: 18px;
+    cursor: pointer;
+    border:
+        2px solid rgba(255,255,255,0.30);
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    min-height: 475px;
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            circle at 15% 40%,
+            rgba(155,138,208,0.25),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(78,198,193,0.12),
+            transparent 30%
+        ),
+        linear-gradient(
+            110deg,
+            #211631 0%,
+            #38224f 48%,
+            #1d1630 100%
+        );
+    color: white;
+}
+
+/* =========================================================
+   DECORAÇÕES DO HERO
+========================================================= */
+
+.estrela {
+    position: absolute;
+    color: #e7c9ff;
+    font-size: 22px;
+    opacity: 0.8;
+}
+
+.estrela-1 {
+    top: 70px;
+    left: 8%;
+}
+
+.estrela-2 {
+    top: 120px;
+    left: 48%;
+}
+
+.estrela-3 {
+    top: 70px;
+    right: 15%;
+}
+
+.estrela-4 {
+    bottom: 80px;
+    right: 7%;
+}
+
+.estrela-5 {
+    bottom: 100px;
+    left: 5%;
+}
+
+.lua {
+    position: absolute;
+    top: 65px;
+    right: 9%;
+    color: #f3c96b;
+    font-size: 55px;
+    opacity: 0.9;
+}
+
+/* =========================================================
+   CONTEÚDO DO HERO
+========================================================= */
+
+.hero-container {
+    max-width: 1250px;
+    min-height: 475px;
+    margin: auto;
+    padding: 50px 25px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-conteudo {
+    width: 52%;
+    padding-left: 35px;
+}
+
+.hero-titulo {
+    font-family:
+        "Playfair Display",
+        serif;
+    font-size:
+        clamp(45px, 5vw, 70px);
+    line-height: 1.05;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.hero-titulo span {
+    color: var(--lavanda);
+    font-style: italic;
+}
+
+.hero-texto {
+    max-width: 560px;
+    color: #eee8f6;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+/* =========================================================
+   BOTÃO PRINCIPAL
+========================================================= */
+
+.btn-cappu {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: var(--turquesa);
+    color: var(--roxo-escuro);
+    padding: 13px 25px;
+    border: none;
+    border-radius: 30px;
+    font-weight: 700;
+    transition: 0.25s;
+}
+
+.btn-cappu:hover {
+    background: #68d8d2;
+    color: var(--roxo-escuro);
+    transform:
+        translateY(-2px);
+    box-shadow:
+        0 8px 20px
+        rgba(78,198,193,0.25);
+}
+
+.btn-cappu .seta {
+    font-size: 20px;
+}
+
+/* =========================================================
+   ILUSTRAÇÃO
+========================================================= */
+
+.hero-ilustracao {
+    width: 48%;
+    height: 400px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circulo-magico {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background:
+        radial-gradient(
+            circle,
+            rgba(155,138,208,0.30),
+            rgba(91,63,140,0.15) 55%,
+            transparent 70%
+        );
+    position: absolute;
+}
+
+.gato-mago {
+    position: relative;
+    font-size: 190px;
+    filter:
+        drop-shadow(
+            0 15px 15px
+            rgba(0,0,0,0.35)
+        );
+    z-index: 2;
+    transform:
+        translateY(-15px);
+}
+
+.chapeu-mago {
+    position: absolute;
+    top: 38px;
+    left: 50%;
+    transform:
+        translateX(-38%)
+        rotate(-8deg);
+    font-size: 105px;
+    z-index: 3;
+}
+
+.livro {
+    position: absolute;
+    bottom: 40px;
+    left: 18%;
+    font-size: 90px;
+    transform:
+        rotate(-8deg);
+}
+
+.cafe {
+    position: absolute;
+    bottom: 20px;
+    right: 18%;
+    font-size: 75px;
+}
+
+.dado {
+    position: absolute;
+    color: var(--lavanda);
+    font-weight: 700;
+    font-size: 30px;
+    filter:
+        drop-shadow(
+            0 4px 5px
+            rgba(0,0,0,0.3)
+        );
+}
+
+.dado-1 {
+    left: 12%;
+    bottom: 80px;
+    transform:
+        rotate(-15deg);
+}
+
+.dado-2 {
+    right: 10%;
+    top: 80px;
+    transform:
+        rotate(20deg);
+}
+
+.dado-3 {
+    right: 23%;
+    bottom: 70px;
+    transform:
+        rotate(-20deg);
+}
+
+/* =========================================================
+   ATALHOS
+========================================================= */
+
+.atalhos {
+    background: var(--creme-claro);
+    padding:
+        45px 25px 35px;
+}
+
+.atalhos-container {
+    max-width: 1250px;
+    margin: auto;
+    display: grid;
+    grid-template-columns:
+        repeat(4, 1fr);
+    gap: 20px;
+}
+
+.atalho-card {
+    background: #fffaf4;
+    border:
+        1px solid var(--borda);
+    border-radius: 15px;
+    padding: 25px;
+    min-height: 190px;
+    position: relative;
+    transition: 0.25s;
+    box-shadow:
+        0 3px 12px
+        rgba(40,27,61,0.03);
+}
+
+.atalho-card:hover {
+    transform:
+        translateY(-5px);
+    box-shadow: var(--sombra);
+    border-color:
+        var(--lavanda);
+}
+
+.atalho-icone {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background:
+        var(--lavanda-clara);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    margin-bottom: 17px;
+}
+
+.atalho-card h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color:
+        var(--roxo-escuro);
+}
+
+.atalho-card p {
+    font-size: 14px;
+    color:
+        var(--texto-claro);
+    line-height: 1.5;
+    margin-bottom: 17px;
+}
+
+.atalho-link {
+    color: var(--roxo);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.atalho-link:hover {
+    color:
+        var(--turquesa-escura);
+}
+
+/* =========================================================
+   EM ALTA
+========================================================= */
+
+.em-alta {
+    max-width: 1250px;
+    margin: auto;
+    padding:
+        30px 25px 70px;
+}
+
+.titulo-secao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.titulo-secao h2 {
+    font-family:
+        "Playfair Display",
+        serif;
+    font-size: 31px;
+    margin: 0;
+    color:
+        var(--roxo-escuro);
+}
+
+.titulo-secao h2::before {
+    content: "✦";
+    color: var(--roxo);
+    margin-right: 10px;
+    font-size: 24px;
+}
+
+.titulo-secao p {
+    color:
+        var(--texto-claro);
+    margin:
+        5px 0 0 15px;
+    font-size: 14px;
+}
+
+.ver-mais {
+    color: var(--roxo);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.ver-mais:hover {
+    color:
+        var(--turquesa-escura);
+}
+
+.aventuras-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(4, 1fr);
+    gap: 20px;
+}
+
+.aventura-card {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    border:
+        1px solid #e4d9e8;
+    transition: 0.25s;
+}
+
+.aventura-card:hover {
+    transform:
+        translateY(-5px);
+    box-shadow: var(--sombra);
+}
+
+.aventura-imagem {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 65px;
+    background:
+        linear-gradient(
+            135deg,
+            #372250,
+            #7251a0
+        );
+    position: relative;
+    overflow: hidden;
+}
+
+.aventura-imagem.floresta {
+    background:
+        linear-gradient(
+            135deg,
+            #243d38,
+            #56786b
+        );
+}
+
+.aventura-imagem.cidade {
+    background:
+        linear-gradient(
+            135deg,
+            #30204b,
+            #684c7d
+        );
+}
+
+.aventura-imagem.taverna {
+    background:
+        linear-gradient(
+            135deg,
+            #533727,
+            #9a6748
+        );
+}
+
+.tag {
+    position: absolute;
+    bottom: 10px;
+    left: 12px;
+    background:
+        #fffaf4;
+    color:
+        var(--roxo-escuro);
+    padding:
+        4px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.aventura-conteudo {
+    padding: 17px;
+}
+
+.aventura-conteudo h3 {
+    font-size: 17px;
+    color:
+        var(--roxo-escuro);
+    margin-bottom: 7px;
+}
+
+.aventura-conteudo p {
+    color:
+        var(--texto-claro);
+    font-size: 13px;
+    line-height: 1.5;
+    min-height: 40px;
+    margin-bottom: 15px;
+}
+
+.dados-card {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    font-size: 12px;
+    color:
+        var(--texto-claro);
+    border-top:
+        1px solid #eee6f1;
+    padding-top: 12px;
+}
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.cta {
+    background:
+        radial-gradient(
+            circle at 10% 50%,
+            rgba(155,138,208,0.20),
+            transparent 30%
+        ),
+        var(--roxo-escuro);
+    color: white;
+    padding: 65px 25px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta h2 {
+    font-family:
+        "Playfair Display",
+        serif;
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.cta p {
+    color: #ddd5e8;
+    max-width: 600px;
+    margin:
+        0 auto 25px;
+    line-height: 1.6;
+}
+
+/* =========================================================
+   RODAPÉ
+========================================================= */
+
+footer {
+    background: #1c1329;
+    color: #c9bfd5;
+    padding: 30px 25px;
+}
+
+.footer-container {
+    max-width: 1250px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-logo {
+    font-family:
+        "Playfair Display",
+        serif;
+    font-size: 21px;
+    color: white;
+}
+
+.footer-text {
+    font-size: 13px;
+    margin: 0;
+}
+
+/* =========================================================
+   MODAL LOGIN
+========================================================= */
+
+.modal-content {
+    border: none;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow:
+        0 20px 60px
+        rgba(0,0,0,0.25);
+}
+
+.modal-header {
+    background:
+        var(--roxo-escuro);
+    color: white;
+    border: none;
+    padding: 20px 25px;
+}
+
+.modal-title {
+    font-family:
+        "Playfair Display",
+        serif;
+    font-size: 23px;
+}
+
+.modal-body {
+    padding: 25px;
+}
+
+.texto-login {
+    color:
+        var(--texto-claro);
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.form-control {
+    border:
+        1px solid #ddd2e5;
+    border-radius: 10px;
+    padding: 12px 14px;
+}
+
+.form-control:focus {
+    border-color:
+        var(--roxo);
+    box-shadow:
+        0 0 0 3px
+        rgba(91,63,140,0.12);
+}
+
+.btn-login-cappu {
+    background:
+        var(--turquesa);
+    border: none;
+    color:
+        var(--roxo-escuro);
+    font-weight: 700;
+    border-radius: 10px;
+    padding: 12px;
+}
+
+.btn-login-cappu:hover {
+    background:
+        var(--turquesa-escura);
+    color: white;
+}
+
+.btn-cadastro {
+    background:
+        var(--roxo);
+    border: none;
+    color: white;
+    font-weight: 700;
+    border-radius: 10px;
+    padding: 12px;
+}
+
+.btn-cadastro:hover {
+    background:
+        var(--roxo-escuro);
+    color: white;
+}
+
+.divisor {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #91859d;
+    font-size: 13px;
+    margin: 18px 0;
+}
+
+.divisor::before,
+.divisor::after {
+    content: "";
+    height: 1px;
+    background: #e5dce9;
+    flex: 1;
+}
+
+/* =========================================================
+   RESPONSIVIDADE
+========================================================= */
+
+@media (max-width: 1000px) {
+    .menu {
+        gap: 18px;
+    }
+
+    .hero-conteudo {
+        width: 55%;
+    }
+
+    .hero-ilustracao {
+        width: 45%;
+    }
+
+    .gato-mago {
+        font-size: 140px;
+    }
+
+    .chapeu-mago {
+        font-size: 80px;
+    }
+
+    .atalhos-container {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .aventuras-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-cappu {
+        height: auto;
+    }
+
+    .navbar-container {
+
+        min-height: 70px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .hero-container {
+        flex-direction:
+            column-reverse;
+        text-align: center;
+        padding-top: 35px;
+    }
+
+    .hero-conteudo {
+        width: 100%;
+        padding: 0;
+    }
+
+    .hero-texto {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-ilustracao {
+        width: 100%;
+        height: 270px;
+    }
+
+    .circulo-magico {
+        width: 230px;
+        height: 230px;
+    }
+
+    .gato-mago {
+        font-size: 120px;
+    }
+
+    .chapeu-mago {
+        font-size: 65px;
+        top: 25px;
+    }
+
+    .livro {
+        font-size: 55px;
+    }
+
+    .cafe {
+        font-size: 50px;
+    }
+
+    .aventuras-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .atalhos-container {
+        grid-template-columns: 1fr;
+    }
+
+    .titulo-secao {
+        align-items:
+            flex-start;
+    }
+
+    .titulo-secao p {
+        display: none;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 21px;
+    }
+
+    .logo-gato {
+        width: 40px;
+        height: 40px;
+        font-size: 22px;
+    }
+
+    .acoes-navbar {
+        gap: 5px;
+    }
+
+    .icone-navbar {
+        display: none;
+    }
+
+    .hero-titulo {
+        font-size: 42px;
+    }
+
+    .hero-texto {
+        font-size: 16px;
+    }
+}
