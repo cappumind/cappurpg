@@ -1,0 +1,1125 @@
+/* =====================================================
+   CONFIGURAÇÕES GERAIS
+===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f8f4ed;
+    color: #25164b;
+    font-family: "DM Sans", sans-serif;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar-cappu {
+    height: 64px;
+    background: #211032;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+    color: white;
+}
+
+.navbar-container {
+    max-width: 1400px;
+    height: 100%;
+    margin: auto;
+    padding: 0 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* Logo */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: white;
+    text-decoration: none;
+
+    font-family: "Playfair Display", serif;
+    font-size: 27px;
+    font-weight: 700;
+}
+
+.logo:hover {
+    color: white;
+}
+
+.logo-gato {
+    width: 44px;
+    height: 44px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #efe7ff;
+
+    font-size: 25px;
+}
+
+
+/* Menu */
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 42px;
+    height: 100%;
+}
+
+.menu a {
+    position: relative;
+
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    color: #eee6f6;
+    text-decoration: none;
+
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.menu a:hover {
+    color: white;
+}
+
+.menu a.ativo {
+    font-weight: 700;
+}
+
+.menu a.ativo::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 3px;
+
+    background: #32d0cc;
+}
+
+
+/* Ações */
+
+.acoes-navbar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.icone-navbar {
+    border: none;
+    background: transparent;
+
+    color: white;
+
+    font-size: 22px;
+
+    cursor: pointer;
+}
+
+.avatar {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    background: #eadcf1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+
+    font-size: 23px;
+}
+
+
+/* =====================================================
+   PÁGINA
+===================================================== */
+
+.pagina-fichas {
+    position: relative;
+
+    min-height: calc(100vh - 64px);
+
+    padding: 55px 25px 70px;
+
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   DECORAÇÕES
+===================================================== */
+
+.decoracao {
+    position: absolute;
+
+    color: #a884c8;
+
+    pointer-events: none;
+}
+
+.estrela-1 {
+    top: 90px;
+    left: 7%;
+
+    font-size: 25px;
+}
+
+.estrela-2 {
+    top: 180px;
+    right: 9%;
+
+    font-size: 18px;
+}
+
+.estrela-3 {
+    bottom: 170px;
+    left: 12%;
+
+    font-size: 22px;
+}
+
+.estrela-4 {
+    bottom: 100px;
+    right: 12%;
+
+    font-size: 25px;
+}
+
+.lua-decorativa {
+    position: absolute;
+
+    top: 110px;
+    right: 15%;
+
+    font-size: 55px;
+
+    color: #c2a2e4;
+
+    opacity: 0.4;
+
+    transform: rotate(-20deg);
+}
+
+
+/* =====================================================
+   CABEÇALHO
+===================================================== */
+
+.cabecalho-fichas {
+    max-width: 1050px;
+
+    margin: 0 auto 40px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 22px;
+}
+
+.icone-cabecalho {
+    width: 75px;
+    height: 75px;
+
+    border-radius: 50%;
+
+    background: #d9c1e8;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 36px;
+}
+
+.pequeno-titulo {
+    display: block;
+
+    color: #735197;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 4px;
+}
+
+.cabecalho-fichas h1 {
+    margin: 0;
+
+    color: #291650;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.cabecalho-fichas p {
+    margin: 7px 0 0;
+
+    color: #716483;
+
+    font-size: 16px;
+}
+
+
+/* =====================================================
+   PROGRESSO
+===================================================== */
+
+.progresso {
+    max-width: 1050px;
+
+    margin: 0 auto 30px;
+
+    display: flex;
+    align-items: center;
+}
+
+.etapa {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    color: #a197ad;
+}
+
+.etapa > span {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+
+    background: #e4dce8;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 700;
+}
+
+.etapa strong {
+    display: block;
+
+    font-size: 14px;
+}
+
+.etapa small {
+    display: block;
+
+    font-size: 11px;
+}
+
+.etapa.ativa {
+    color: #39206a;
+}
+
+.etapa.ativa > span {
+    background: #8d63bd;
+
+    color: white;
+}
+
+.linha-progresso {
+    flex: 1;
+
+    height: 1px;
+
+    background: #d9cddd;
+
+    margin: 0 18px;
+}
+
+
+/* =====================================================
+   CARD PRINCIPAL
+===================================================== */
+
+.ficha-container {
+    position: relative;
+
+    max-width: 1050px;
+
+    margin: auto;
+
+    background: #fffdf8;
+
+    border: 1px solid #ddd0df;
+
+    border-radius: 18px;
+
+    padding: 45px;
+
+    box-shadow: 0 12px 35px rgba(52, 32, 75, 0.08);
+}
+
+
+/* =====================================================
+   TÍTULO DA ETAPA
+===================================================== */
+
+.titulo-etapa {
+    display: flex;
+    align-items: center;
+
+    gap: 17px;
+
+    margin-bottom: 35px;
+}
+
+.numero-etapa {
+    width: 52px;
+    height: 52px;
+
+    border-radius: 50%;
+
+    background: #e4d4ef;
+
+    color: #49266d;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 700;
+
+    font-size: 14px;
+}
+
+.titulo-etapa h2 {
+    margin: 0;
+
+    color: #291650;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 29px;
+}
+
+.titulo-etapa p {
+    margin: 4px 0 0;
+
+    color: #756982;
+}
+
+
+/* =====================================================
+   ETAPAS
+===================================================== */
+
+.etapa-conteudo {
+    display: none;
+}
+
+.etapa-conteudo.ativa {
+    display: block;
+}
+
+
+/* =====================================================
+   SISTEMAS
+===================================================== */
+
+.sistemas-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 17px;
+}
+
+.sistema-card {
+    cursor: pointer;
+}
+
+.sistema-card input {
+    display: none;
+}
+
+.sistema-conteudo {
+    position: relative;
+
+    min-height: 105px;
+
+    padding: 20px;
+
+    border: 1px solid #ddd1e2;
+
+    border-radius: 14px;
+
+    background: #fcf9f4;
+
+    display: flex;
+    align-items: center;
+
+    gap: 17px;
+
+    transition: 0.2s;
+}
+
+.sistema-conteudo:hover {
+    transform: translateY(-2px);
+
+    border-color: #a982c8;
+
+    box-shadow: 0 7px 18px rgba(74, 44, 101, 0.08);
+}
+
+.sistema-card input:checked + .sistema-conteudo {
+    border: 2px solid #72509a;
+
+    background: #f2eafa;
+
+    box-shadow: 0 8px 20px rgba(81, 48, 110, 0.12);
+}
+
+.sistema-icone {
+    width: 57px;
+    height: 57px;
+
+    border-radius: 50%;
+
+    background: #dac4e8;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 27px;
+
+    flex-shrink: 0;
+}
+
+.sistema-conteudo h3 {
+    margin: 0;
+
+    color: #2c1758;
+
+    font-size: 17px;
+}
+
+.sistema-conteudo p {
+    margin: 4px 0 0;
+
+    color: #756984;
+
+    font-size: 13px;
+}
+
+.check-sistema {
+    position: absolute;
+
+    right: 18px;
+
+    width: 25px;
+    height: 25px;
+
+    border-radius: 50%;
+
+    background: #32c9c5;
+
+    color: white;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.sistema-card input:checked + .sistema-conteudo .check-sistema {
+    display: flex;
+}
+
+
+/* =====================================================
+   BOTÕES DE ETAPA
+===================================================== */
+
+.acoes-etapa {
+    margin-top: 38px;
+
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.btn-proximo {
+    border: none;
+
+    background: #2bc7c4;
+
+    color: #211032;
+
+    padding: 13px 24px;
+
+    border-radius: 30px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.btn-proximo:hover {
+    background: #22b6b3;
+
+    transform: translateY(-2px);
+}
+
+.btn-proximo span {
+    margin-left: 12px;
+
+    font-size: 18px;
+}
+
+.btn-voltar {
+    border: 1px solid #cfc1d5;
+
+    background: transparent;
+
+    color: #4d3b61;
+
+    padding: 12px 22px;
+
+    border-radius: 30px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.btn-voltar:hover {
+    background: #f0e9f3;
+}
+
+
+/* =====================================================
+   SISTEMA ESCOLHIDO
+===================================================== */
+
+.sistema-selecionado {
+    padding: 15px 18px;
+
+    background: #f0e8f4;
+
+    border-radius: 12px;
+
+    margin-bottom: 35px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sistema-selecionado span {
+    color: #746580;
+
+    font-size: 13px;
+}
+
+.sistema-selecionado strong {
+    color: #412366;
+}
+
+
+/* =====================================================
+   CAMPOS
+===================================================== */
+
+.campo-ficha {
+    margin-bottom: 30px;
+}
+
+.campo-ficha > label {
+    display: block;
+
+    color: #311a58;
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    margin-bottom: 3px;
+}
+
+.descricao-campo {
+    color: #81758b;
+
+    font-size: 13px;
+
+    margin: 0 0 17px;
+}
+
+
+/* =====================================================
+   GÊNERO
+===================================================== */
+
+.generos {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+.genero-card {
+    cursor: pointer;
+}
+
+.genero-card input {
+    display: none;
+}
+
+.genero-card > div {
+    min-height: 90px;
+
+    border: 1px solid #ddd1e2;
+
+    border-radius: 13px;
+
+    background: #fcf9f4;
+
+    padding: 18px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    transition: 0.2s;
+}
+
+.genero-card:hover > div {
+    border-color: #aa8ac4;
+}
+
+.genero-card input:checked + div {
+    border: 2px solid #76519c;
+
+    background: #f1e9f6;
+}
+
+.genero-icone {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    background: #dfccea;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #4b2a70;
+
+    font-size: 20px;
+}
+
+.genero-card strong {
+    color: #402464;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   NOME
+===================================================== */
+
+.nome-input-area {
+    display: flex;
+
+    gap: 12px;
+}
+
+.input-ficha {
+    flex: 1;
+
+    height: 52px;
+
+    padding: 0 17px;
+
+    border: 1px solid #d7cadc;
+
+    border-radius: 10px;
+
+    background: white;
+
+    color: #2b174c;
+
+    font-family: "DM Sans", sans-serif;
+
+    outline: none;
+}
+
+.input-ficha:focus {
+    border-color: #8c64b1;
+
+    box-shadow: 0 0 0 3px rgba(140, 100, 177, 0.12);
+}
+
+.btn-nome-aleatorio {
+    height: 52px;
+
+    padding: 0 20px;
+
+    border: 1px solid #8b67ac;
+
+    border-radius: 10px;
+
+    background: #f0e7f6;
+
+    color: #4b2a70;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition: 0.2s;
+}
+
+.btn-nome-aleatorio:hover {
+    background: #e3d4ee;
+
+    transform: translateY(-1px);
+}
+
+.btn-nome-aleatorio span {
+    margin-right: 5px;
+}
+
+.mensagem-nome {
+    display: block;
+
+    margin-top: 8px;
+
+    color: #8b7d94;
+
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   RESUMO
+===================================================== */
+
+.personagem-resumo {
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    background: #f1e8f5;
+
+    border: 1px solid #ded0e4;
+}
+
+.resumo-icone {
+    width: 70px;
+    height: 70px;
+
+    border-radius: 50%;
+
+    background: #d7c0e6;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 35px;
+}
+
+.personagem-resumo span {
+    color: #806b91;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+.personagem-resumo h3 {
+    margin: 3px 0;
+
+    color: #301a54;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 27px;
+}
+
+.personagem-resumo p {
+    margin: 0;
+
+    color: #6f617b;
+}
+
+
+/* =====================================================
+   AVISO
+===================================================== */
+
+.proxima-etapa-aviso {
+    display: flex;
+
+    gap: 18px;
+
+    margin-top: 25px;
+
+    padding: 20px;
+
+    border-radius: 13px;
+
+    background: #fbf7ee;
+
+    border: 1px solid #e1d7c5;
+}
+
+.proxima-etapa-aviso > span {
+    font-size: 25px;
+
+    color: #9d70c3;
+}
+
+.proxima-etapa-aviso h3 {
+    margin: 0 0 5px;
+
+    color: #38205d;
+
+    font-size: 16px;
+}
+
+.proxima-etapa-aviso p {
+    margin: 0;
+
+    color: #756b7b;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   FRASE
+===================================================== */
+
+.frase-ficha {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 35px;
+
+    color: #806c91;
+}
+
+.frase-ficha span {
+    color: #a87cc7;
+}
+
+.frase-ficha em {
+    font-family: "Playfair Display", serif;
+
+    font-size: 16px;
+}
+
+
+/* =====================================================
+   MODAL
+===================================================== */
+
+.modal-cappu {
+    overflow: hidden;
+
+    border: none;
+
+    border-radius: 15px;
+
+    background: #fffaf5;
+}
+
+.modal-cappu .modal-header {
+    background: #29143d;
+
+    color: white;
+
+    border: none;
+}
+
+.modal-cappu .modal-title {
+    font-family: "Playfair Display", serif;
+}
+
+.texto-login {
+    color: #74667c;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+.btn-login-cappu {
+    background: #2bc7c4;
+
+    color: #211032;
+
+    font-weight: 700;
+
+    border: none;
+}
+
+.btn-login-cappu:hover {
+    background: #21b5b2;
+
+    color: #211032;
+}
+
+.btn-cadastro {
+    background: #76509c;
+
+    color: white;
+
+    border: none;
+
+    font-weight: 700;
+}
+
+.btn-cadastro:hover {
+    background: #624187;
+
+    color: white;
+}
+
+.divisor {
+    text-align: center;
+
+    margin: 17px 0;
+
+    color: #9b8da3;
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   RESPONSIVO
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .menu {
+        gap: 18px;
+    }
+
+    .sistemas-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .generos {
+        grid-template-columns: 1fr;
+    }
+
+    .ficha-container {
+        padding: 30px;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .navbar-container {
+        padding: 0 15px;
+    }
+
+    .logo span:last-child {
+        display: none;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .cabecalho-fichas {
+        align-items: flex-start;
+    }
+
+    .cabecalho-fichas h1 {
+        font-size: 32px;
+    }
+
+    .progresso {
+        overflow-x: auto;
+    }
+
+    .etapa {
+        min-width: 120px;
+    }
+
+    .linha-progresso {
+        min-width: 25px;
+    }
+
+    .ficha-container {
+        padding: 22px;
+    }
+
+    .nome-input-area {
+        flex-direction: column;
+    }
+
+    .btn-nome-aleatorio {
+        width: 100%;
+    }
+
+    .acoes-etapa {
+        justify-content: space-between;
+    }
+
+}
