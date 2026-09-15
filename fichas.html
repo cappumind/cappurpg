@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -29,6 +30,7 @@
     <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
 
     <script src="js/firebase-config.js"></script>
+
 </head>
 
 <body>
@@ -227,8 +229,8 @@
                 <span>2</span>
 
                 <div>
-                    <strong>Personagem</strong>
-                    <small>Identidade</small>
+                    <strong>Identidade</strong>
+                    <small>Seu personagem</small>
                 </div>
 
             </div>
@@ -242,8 +244,128 @@
                 <span>3</span>
 
                 <div>
-                    <strong>Ficha</strong>
+                    <strong>Atributos</strong>
                     <small>Características</small>
+                </div>
+
+            </div>
+
+
+            <div class="linha-progresso"></div>
+
+
+            <div class="etapa" id="indicador4">
+
+                <span>4</span>
+
+                <div>
+                    <strong>Recursos</strong>
+                    <small>Valores da ficha</small>
+                </div>
+
+            </div>
+
+
+            <div class="linha-progresso"></div>
+
+
+            <div class="etapa" id="indicador5">
+
+                <span>5</span>
+
+                <div>
+                    <strong>Perícias</strong>
+                    <small>Conhecimentos</small>
+                </div>
+
+            </div>
+
+
+            <div class="linha-progresso"></div>
+
+
+            <div class="etapa" id="indicador6">
+
+                <span>6</span>
+
+                <div>
+                    <strong>Combate</strong>
+                    <small>Preparação</small>
+                </div>
+
+            </div>
+
+
+            <div class="linha-progresso"></div>
+
+
+            <div class="etapa" id="indicador7">
+
+                <span>7</span>
+
+                <div>
+                    <strong>Habilidades</strong>
+                    <small>Poderes</small>
+                </div>
+
+            </div>
+
+
+            <div class="linha-progresso"></div>
+
+
+            <div class="etapa" id="indicador8">
+
+                <span>8</span>
+
+                <div>
+                    <strong>Equipamentos</strong>
+                    <small>Itens</small>
+                </div>
+
+            </div>
+
+
+            <div class="linha-progresso"></div>
+
+
+            <div class="etapa" id="indicador9">
+
+                <span>9</span>
+
+                <div>
+                    <strong>Personalidade</strong>
+                    <small>Opcional</small>
+                </div>
+
+            </div>
+
+
+            <div class="linha-progresso"></div>
+
+
+            <div class="etapa" id="indicador10">
+
+                <span>10</span>
+
+                <div>
+                    <strong>História</strong>
+                    <small>Opcional</small>
+                </div>
+
+            </div>
+
+
+            <div class="linha-progresso"></div>
+
+
+            <div class="etapa" id="indicador11">
+
+                <span>11</span>
+
+                <div>
+                    <strong>Finalização</strong>
+                    <small>Opcional</small>
                 </div>
 
             </div>
@@ -259,7 +381,7 @@
 
 
             <!-- =============================================
-                 ETAPA 1
+                 ETAPA 1 — SISTEMA
             ============================================== -->
 
             <div class="etapa-conteudo ativa" id="etapa1">
@@ -290,7 +412,7 @@
                 <div class="sistemas-grid">
 
 
-                    <!-- Sistema 1 -->
+                    <!-- D&D -->
 
                     <label class="sistema-card">
 
@@ -326,7 +448,7 @@
                     </label>
 
 
-                    <!-- Sistema 2 -->
+                    <!-- Tormenta -->
 
                     <label class="sistema-card">
 
@@ -362,7 +484,7 @@
                     </label>
 
 
-                    <!-- Sistema 3 -->
+                    <!-- Ordem -->
 
                     <label class="sistema-card">
 
@@ -398,7 +520,7 @@
                     </label>
 
 
-                    <!-- Sistema personalizado -->
+                    <!-- Outro -->
 
                     <label class="sistema-card">
 
@@ -456,11 +578,10 @@
 
 
             <!-- =============================================
-                 ETAPA 2
+                 ETAPA 2 — IDENTIDADE
             ============================================== -->
 
             <div class="etapa-conteudo" id="etapa2">
-
 
                 <div class="titulo-etapa">
 
@@ -471,11 +592,11 @@
                     <div>
 
                         <h2>
-                            Quem é seu personagem?
+                            Identidade
                         </h2>
 
                         <p>
-                            Comece dando uma identidade para ele.
+                            Comece dando uma identidade para seu personagem.
                         </p>
 
                     </div>
@@ -624,6 +745,7 @@
 
                     </div>
 
+
                     <small
                         class="mensagem-nome"
                         id="mensagemNome">
@@ -631,6 +753,115 @@
                         Escolha o gênero para liberar os nomes aleatórios.
 
                     </small>
+
+                </div>
+
+
+                <!-- Idade -->
+
+                <div class="campo-ficha">
+
+                    <label for="idadePersonagem">
+                        Idade
+                    </label>
+
+                    <input
+                        type="number"
+                        id="idadePersonagem"
+                        class="input-ficha"
+                        min="0"
+                        placeholder="Digite a idade">
+
+                </div>
+
+
+                <!-- Raça -->
+
+                <div class="campo-ficha">
+
+                    <label for="racaPersonagem">
+                        Raça
+                    </label>
+
+                    <input
+                        type="text"
+                        id="racaPersonagem"
+                        class="input-ficha"
+                        placeholder="Ex.: Humano, Elfo, Anão...">
+
+                </div>
+
+
+                <!-- Classe -->
+
+                <div class="campo-ficha">
+
+                    <label for="classePersonagem">
+                        Classe
+                    </label>
+
+                    <input
+                        type="text"
+                        id="classePersonagem"
+                        class="input-ficha"
+                        placeholder="Ex.: Guerreiro, Mago, Ladino...">
+
+                </div>
+
+
+                <!-- Nível -->
+
+                <div class="campo-ficha">
+
+                    <label for="nivelPersonagem">
+                        Nível
+                    </label>
+
+                    <input
+                        type="number"
+                        id="nivelPersonagem"
+                        class="input-ficha"
+                        min="1"
+                        value="1"
+                        placeholder="Nível do personagem">
+
+                </div>
+
+
+                <!-- Origem -->
+
+                <div class="campo-ficha">
+
+                    <label for="origemPersonagem">
+                        Origem
+                        <span class="campo-opcional">
+                            Opcional
+                        </span>
+                    </label>
+
+                    <textarea
+                        id="origemPersonagem"
+                        class="input-ficha textarea-ficha"
+                        placeholder="Conte de onde seu personagem veio..."></textarea>
+
+                </div>
+
+
+                <!-- Aparência -->
+
+                <div class="campo-ficha">
+
+                    <label for="aparenciaPersonagem">
+                        Aparência
+                        <span class="campo-opcional">
+                            Opcional
+                        </span>
+                    </label>
+
+                    <textarea
+                        id="aparenciaPersonagem"
+                        class="input-ficha textarea-ficha"
+                        placeholder="Descreva a aparência do seu personagem..."></textarea>
 
                 </div>
 
@@ -666,11 +897,10 @@
 
 
             <!-- =============================================
-                 ETAPA 3
+                 ETAPA 3 — ATRIBUTOS
             ============================================== -->
 
             <div class="etapa-conteudo" id="etapa3">
-
 
                 <div class="titulo-etapa">
 
@@ -681,11 +911,11 @@
                     <div>
 
                         <h2>
-                            Vamos continuar
+                            Atributos
                         </h2>
 
                         <p>
-                            Agora podemos começar a montar as características da ficha.
+                            Defina as principais características do seu personagem.
                         </p>
 
                     </div>
@@ -693,48 +923,94 @@
                 </div>
 
 
-                <div class="personagem-resumo">
+                <div class="atributos-grid">
 
-                    <div class="resumo-icone">
-                        🐈‍⬛
-                    </div>
+                    <div class="campo-ficha atributo-card">
 
-                    <div>
+                        <label for="forca">
+                            Força
+                        </label>
 
-                        <span>
-                            SEU PERSONAGEM
-                        </span>
-
-                        <h3 id="resumoNome">
-                            -
-                        </h3>
-
-                        <p id="resumoSistema">
-                            -
-                        </p>
+                        <input
+                            type="number"
+                            id="forca"
+                            class="input-ficha"
+                            placeholder="0">
 
                     </div>
 
-                </div>
+
+                    <div class="campo-ficha atributo-card">
+
+                        <label for="destreza">
+                            Destreza
+                        </label>
+
+                        <input
+                            type="number"
+                            id="destreza"
+                            class="input-ficha"
+                            placeholder="0">
+
+                    </div>
 
 
-                <div class="proxima-etapa-aviso">
+                    <div class="campo-ficha atributo-card">
 
-                    <span>
-                        ✦
-                    </span>
+                        <label for="constituicao">
+                            Constituição
+                        </label>
 
-                    <div>
+                        <input
+                            type="number"
+                            id="constituicao"
+                            class="input-ficha"
+                            placeholder="0">
 
-                        <h3>
-                            A ficha está apenas começando!
-                        </h3>
+                    </div>
 
-                        <p>
-                            Aqui vamos adicionar classe, raça,
-                            atributos, habilidades e todas as
-                            outras características do personagem.
-                        </p>
+
+                    <div class="campo-ficha atributo-card">
+
+                        <label for="inteligencia">
+                            Inteligência
+                        </label>
+
+                        <input
+                            type="number"
+                            id="inteligencia"
+                            class="input-ficha"
+                            placeholder="0">
+
+                    </div>
+
+
+                    <div class="campo-ficha atributo-card">
+
+                        <label for="sabedoria">
+                            Sabedoria
+                        </label>
+
+                        <input
+                            type="number"
+                            id="sabedoria"
+                            class="input-ficha"
+                            placeholder="0">
+
+                    </div>
+
+
+                    <div class="campo-ficha atributo-card">
+
+                        <label for="carisma">
+                            Carisma
+                        </label>
+
+                        <input
+                            type="number"
+                            id="carisma"
+                            class="input-ficha"
+                            placeholder="0">
 
                     </div>
 
@@ -754,9 +1030,9 @@
 
                     <button
                         class="btn-proximo"
-                        onclick="finalizarEtapaInicial()">
+                        onclick="irParaEtapa4()">
 
-                        Continuar ficha
+                        Continuar
 
                         <span>
                             →
@@ -767,6 +1043,1360 @@
                 </div>
 
             </div>
+
+
+            <!-- =============================================
+                 ETAPA 4 — RECURSOS
+            ============================================== -->
+
+            <div class="etapa-conteudo" id="etapa4">
+
+                <div class="titulo-etapa">
+
+                    <span class="numero-etapa">
+                        04
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            Recursos
+                        </h2>
+
+                        <p>
+                            Defina os recursos básicos do personagem.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="recursos-grid">
+
+
+                    <div class="campo-ficha">
+
+                        <label for="pv">
+                            PV
+                        </label>
+
+                        <input
+                            type="number"
+                            id="pv"
+                            class="input-ficha"
+                            placeholder="Pontos de Vida">
+
+                    </div>
+
+
+                    <div class="campo-ficha">
+
+                        <label for="mana">
+                            Mana
+                        </label>
+
+                        <input
+                            type="number"
+                            id="mana"
+                            class="input-ficha"
+                            placeholder="Mana">
+
+                    </div>
+
+
+                    <div class="campo-ficha">
+
+                        <label for="vigor">
+                            Vigor
+                        </label>
+
+                        <input
+                            type="number"
+                            id="vigor"
+                            class="input-ficha"
+                            placeholder="Vigor">
+
+                    </div>
+
+
+                    <div class="campo-ficha">
+
+                        <label for="defesa">
+                            Defesa
+                        </label>
+
+                        <input
+                            type="number"
+                            id="defesa"
+                            class="input-ficha"
+                            placeholder="Defesa">
+
+                    </div>
+
+
+                    <div class="campo-ficha">
+
+                        <label for="iniciativa">
+                            Iniciativa
+                        </label>
+
+                        <input
+                            type="number"
+                            id="iniciativa"
+                            class="input-ficha"
+                            placeholder="Iniciativa">
+
+                    </div>
+
+
+                    <div class="campo-ficha">
+
+                        <label for="movimento">
+                            Movimento
+                        </label>
+
+                        <input
+                            type="number"
+                            id="movimento"
+                            class="input-ficha"
+                            placeholder="Movimento">
+
+                    </div>
+
+                </div>
+
+
+                <div class="acoes-etapa">
+
+                    <button
+                        class="btn-voltar"
+                        onclick="voltarParaEtapa3()">
+
+                        ← Voltar
+
+                    </button>
+
+
+                    <button
+                        class="btn-proximo"
+                        onclick="irParaEtapa5()">
+
+                        Continuar
+
+                        <span>
+                            →
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- =============================================
+                 ETAPA 5 — PERÍCIAS
+            ============================================== -->
+
+            <div class="etapa-conteudo" id="etapa5">
+
+                <div class="titulo-etapa">
+
+                    <span class="numero-etapa">
+                        05
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            Perícias
+                        </h2>
+
+                        <p>
+                            Escolha e distribua os conhecimentos do seu personagem.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FOR -->
+
+                <div class="pericias-grupo">
+
+                    <h3>
+                        FOR — Força
+                    </h3>
+
+                    <div class="pericias-grid">
+
+                        <label><input type="checkbox" name="pericias" value="Atletismo"> Atletismo</label>
+                        <label><input type="checkbox" name="pericias" value="Escalada"> Escalada</label>
+                        <label><input type="checkbox" name="pericias" value="Levantamento de peso"> Levantamento de peso</label>
+                        <label><input type="checkbox" name="pericias" value="Natação"> Natação</label>
+                        <label><input type="checkbox" name="pericias" value="Luta corporal"> Luta corporal</label>
+                        <label><input type="checkbox" name="pericias" value="Arrombamento físico"> Arrombamento físico</label>
+                        <label><input type="checkbox" name="pericias" value="Empurrar/Puxar"> Empurrar/Puxar</label>
+                        <label><input type="checkbox" name="pericias" value="Quebrar objetos"> Quebrar objetos</label>
+                        <label><input type="checkbox" name="pericias" value="Imobilização"> Imobilização</label>
+                        <label><input type="checkbox" name="pericias" value="Intimidação física"> Intimidação física</label>
+                        <label><input type="checkbox" name="pericias" value="Força bruta"> Força bruta</label>
+                        <label><input type="checkbox" name="pericias" value="Resistência a esforço físico"> Resistência a esforço físico</label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DES -->
+
+                <div class="pericias-grupo">
+
+                    <h3>
+                        DES — Destreza
+                    </h3>
+
+                    <div class="pericias-grid">
+
+                        <label><input type="checkbox" name="pericias" value="Acrobacia"> Acrobacia</label>
+                        <label><input type="checkbox" name="pericias" value="Furtividade"> Furtividade</label>
+                        <label><input type="checkbox" name="pericias" value="Prestidigitação"> Prestidigitação</label>
+                        <label><input type="checkbox" name="pericias" value="Equilíbrio"> Equilíbrio</label>
+                        <label><input type="checkbox" name="pericias" value="Pontaria"> Pontaria</label>
+                        <label><input type="checkbox" name="pericias" value="Arquearia"> Arquearia</label>
+                        <label><input type="checkbox" name="pericias" value="Arremesso"> Arremesso</label>
+                        <label><input type="checkbox" name="pericias" value="Esquiva"> Esquiva</label>
+                        <label><input type="checkbox" name="pericias" value="Pilotagem"> Pilotagem</label>
+                        <label><input type="checkbox" name="pericias" value="Condução"> Condução</label>
+                        <label><input type="checkbox" name="pericias" value="Roubo"> Roubo</label>
+                        <label><input type="checkbox" name="pericias" value="Desarme de armadilhas"> Desarme de armadilhas</label>
+                        <label><input type="checkbox" name="pericias" value="Lockpicking/Arrombamento"> Lockpicking/Arrombamento</label>
+                        <label><input type="checkbox" name="pericias" value="Escapismo"> Escapismo</label>
+                        <label><input type="checkbox" name="pericias" value="Dança"> Dança</label>
+                        <label><input type="checkbox" name="pericias" value="Reflexos"> Reflexos</label>
+                        <label><input type="checkbox" name="pericias" value="Manuseio de armas"> Manuseio de armas</label>
+                        <label><input type="checkbox" name="pericias" value="Sleight of Hand"> Sleight of Hand</label>
+                        <label><input type="checkbox" name="pericias" value="Atuação corporal"> Atuação corporal</label>
+                        <label><input type="checkbox" name="pericias" value="Direção"> Direção</label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CON -->
+
+                <div class="pericias-grupo">
+
+                    <h3>
+                        CON — Constituição
+                    </h3>
+
+                    <div class="pericias-grid">
+
+                        <label><input type="checkbox" name="pericias" value="Resistência física"> Resistência física</label>
+                        <label><input type="checkbox" name="pericias" value="Resistência à dor"> Resistência à dor</label>
+                        <label><input type="checkbox" name="pericias" value="Resistência a venenos"> Resistência a venenos</label>
+                        <label><input type="checkbox" name="pericias" value="Resistência a doenças"> Resistência a doenças</label>
+                        <label><input type="checkbox" name="pericias" value="Resistência a álcool"> Resistência a álcool</label>
+                        <label><input type="checkbox" name="pericias" value="Resistência à exaustão"> Resistência à exaustão</label>
+                        <label><input type="checkbox" name="pericias" value="Resistência ao frio"> Resistência ao frio</label>
+                        <label><input type="checkbox" name="pericias" value="Resistência ao calor"> Resistência ao calor</label>
+                        <label><input type="checkbox" name="pericias" value="Resistência à fome"> Resistência à fome</label>
+                        <label><input type="checkbox" name="pericias" value="Resistência à sede"> Resistência à sede</label>
+                        <label><input type="checkbox" name="pericias" value="Fôlego"> Fôlego</label>
+                        <label><input type="checkbox" name="pericias" value="Sobrevivência física"> Sobrevivência física</label>
+                        <label><input type="checkbox" name="pericias" value="Tolerância corporal"> Tolerância corporal</label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- INT -->
+
+                <div class="pericias-grupo">
+
+                    <h3>
+                        INT — Inteligência
+                    </h3>
+
+                    <div class="pericias-grid">
+
+                        <label><input type="checkbox" name="pericias" value="História"> História</label>
+                        <label><input type="checkbox" name="pericias" value="Geografia"> Geografia</label>
+                        <label><input type="checkbox" name="pericias" value="Matemática"> Matemática</label>
+                        <label><input type="checkbox" name="pericias" value="Ciências"> Ciências</label>
+                        <label><input type="checkbox" name="pericias" value="Química"> Química</label>
+                        <label><input type="checkbox" name="pericias" value="Física"> Física</label>
+                        <label><input type="checkbox" name="pericias" value="Biologia"> Biologia</label>
+                        <label><input type="checkbox" name="pericias" value="Medicina"> Medicina</label>
+                        <label><input type="checkbox" name="pericias" value="Anatomia"> Anatomia</label>
+                        <label><input type="checkbox" name="pericias" value="Tecnologia"> Tecnologia</label>
+                        <label><input type="checkbox" name="pericias" value="Engenharia"> Engenharia</label>
+                        <label><input type="checkbox" name="pericias" value="Computação"> Computação</label>
+                        <label><input type="checkbox" name="pericias" value="Investigação"> Investigação</label>
+                        <label><input type="checkbox" name="pericias" value="Criptografia"> Criptografia</label>
+                        <label><input type="checkbox" name="pericias" value="Linguística"> Linguística</label>
+                        <label><input type="checkbox" name="pericias" value="Decifração"> Decifração</label>
+                        <label><input type="checkbox" name="pericias" value="Conhecimento mágico"> Conhecimento mágico</label>
+                        <label><input type="checkbox" name="pericias" value="Alquimia"> Alquimia</label>
+                        <label><input type="checkbox" name="pericias" value="Arcanismo"> Arcanismo</label>
+                        <label><input type="checkbox" name="pericias" value="Estratégia"> Estratégia</label>
+                        <label><input type="checkbox" name="pericias" value="Tática"> Tática</label>
+                        <label><input type="checkbox" name="pericias" value="Economia"> Economia</label>
+                        <label><input type="checkbox" name="pericias" value="Direito"> Direito</label>
+                        <label><input type="checkbox" name="pericias" value="Política"> Política</label>
+                        <label><input type="checkbox" name="pericias" value="Religião"> Religião</label>
+                        <label><input type="checkbox" name="pericias" value="Cultura"> Cultura</label>
+                        <label><input type="checkbox" name="pericias" value="Heráldica"> Heráldica</label>
+                        <label><input type="checkbox" name="pericias" value="Navegação"> Navegação</label>
+                        <label><input type="checkbox" name="pericias" value="Conhecimento de monstros"> Conhecimento de monstros</label>
+                        <label><input type="checkbox" name="pericias" value="Conhecimento de plantas"> Conhecimento de plantas</label>
+                        <label><input type="checkbox" name="pericias" value="Conhecimento de minerais"> Conhecimento de minerais</label>
+                        <label><input type="checkbox" name="pericias" value="Conhecimento de armas"> Conhecimento de armas</label>
+                        <label><input type="checkbox" name="pericias" value="Conhecimento de criaturas"> Conhecimento de criaturas</label>
+                        <label><input type="checkbox" name="pericias" value="Memória"> Memória</label>
+                        <label><input type="checkbox" name="pericias" value="Raciocínio"> Raciocínio</label>
+                        <label><input type="checkbox" name="pericias" value="Dedução"> Dedução</label>
+                        <label><input type="checkbox" name="pericias" value="Planejamento"> Planejamento</label>
+                        <label><input type="checkbox" name="pericias" value="Avaliação"> Avaliação</label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SAB -->
+
+                <div class="pericias-grupo">
+
+                    <h3>
+                        SAB — Sabedoria
+                    </h3>
+
+                    <div class="pericias-grid">
+
+                        <label><input type="checkbox" name="pericias" value="Percepção"> Percepção</label>
+                        <label><input type="checkbox" name="pericias" value="Intuição"> Intuição</label>
+                        <label><input type="checkbox" name="pericias" value="Sobrevivência"> Sobrevivência</label>
+                        <label><input type="checkbox" name="pericias" value="Rastreamento"> Rastreamento</label>
+                        <label><input type="checkbox" name="pericias" value="Atenção"> Atenção</label>
+                        <label><input type="checkbox" name="pericias" value="Sentir perigo"> Sentir perigo</label>
+                        <label><input type="checkbox" name="pericias" value="Ouvir"> Ouvir</label>
+                        <label><input type="checkbox" name="pericias" value="Observar"> Observar</label>
+                        <label><input type="checkbox" name="pericias" value="Procurar"> Procurar</label>
+                        <label><input type="checkbox" name="pericias" value="Empatia"> Empatia</label>
+                        <label><input type="checkbox" name="pericias" value="Medicina prática"> Medicina prática</label>
+                        <label><input type="checkbox" name="pericias" value="Primeiros socorros"> Primeiros socorros</label>
+                        <label><input type="checkbox" name="pericias" value="Orientação"> Orientação</label>
+                        <label><input type="checkbox" name="pericias" value="Navegação"> Navegação</label>
+                        <label><input type="checkbox" name="pericias" value="Adestramento"> Adestramento</label>
+                        <label><input type="checkbox" name="pericias" value="Trato com animais"> Trato com animais</label>
+                        <label><input type="checkbox" name="pericias" value="Caça"> Caça</label>
+                        <label><input type="checkbox" name="pericias" value="Pesca"> Pesca</label>
+                        <label><input type="checkbox" name="pericias" value="Herbalismo"> Herbalismo</label>
+                        <label><input type="checkbox" name="pericias" value="Identificação de criaturas"> Identificação de criaturas</label>
+                        <label><input type="checkbox" name="pericias" value="Identificação de venenos"> Identificação de venenos</label>
+                        <label><input type="checkbox" name="pericias" value="Identificação de magia"> Identificação de magia</label>
+                        <label><input type="checkbox" name="pericias" value="Meditação"> Meditação</label>
+                        <label><input type="checkbox" name="pericias" value="Discernimento"> Discernimento</label>
+                        <label><input type="checkbox" name="pericias" value="Ler pessoas"> Ler pessoas</label>
+                        <label><input type="checkbox" name="pericias" value="Pressentimento"> Pressentimento</label>
+                        <label><input type="checkbox" name="pericias" value="Resistência mental"> Resistência mental</label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CAR -->
+
+                <div class="pericias-grupo">
+
+                    <h3>
+                        CAR — Carisma
+                    </h3>
+
+                    <div class="pericias-grid">
+
+                        <label><input type="checkbox" name="pericias" value="Persuasão"> Persuasão</label>
+                        <label><input type="checkbox" name="pericias" value="Intimidação"> Intimidação</label>
+                        <label><input type="checkbox" name="pericias" value="Enganação"> Enganação</label>
+                        <label><input type="checkbox" name="pericias" value="Diplomacia"> Diplomacia</label>
+                        <label><input type="checkbox" name="pericias" value="Performance"> Performance</label>
+                        <label><input type="checkbox" name="pericias" value="Atuação"> Atuação</label>
+                        <label><input type="checkbox" name="pericias" value="Liderança"> Liderança</label>
+                        <label><input type="checkbox" name="pericias" value="Negociação"> Negociação</label>
+                        <label><input type="checkbox" name="pericias" value="Interrogatório"> Interrogatório</label>
+                        <label><input type="checkbox" name="pericias" value="Sedução"> Sedução</label>
+                        <label><input type="checkbox" name="pericias" value="Etiqueta"> Etiqueta</label>
+                        <label><input type="checkbox" name="pericias" value="Blefe"> Blefe</label>
+                        <label><input type="checkbox" name="pericias" value="Oratória"> Oratória</label>
+                        <label><input type="checkbox" name="pericias" value="Discurso"> Discurso</label>
+                        <label><input type="checkbox" name="pericias" value="Manipulação"> Manipulação</label>
+                        <label><input type="checkbox" name="pericias" value="Comércio"> Comércio</label>
+                        <label><input type="checkbox" name="pericias" value="Barganha"> Barganha</label>
+                        <label><input type="checkbox" name="pericias" value="Provocação"> Provocação</label>
+                        <label><input type="checkbox" name="pericias" value="Inspiração"> Inspiração</label>
+                        <label><input type="checkbox" name="pericias" value="Disfarce social"> Disfarce social</label>
+                        <label><input type="checkbox" name="pericias" value="Relações públicas"> Relações públicas</label>
+                        <label><input type="checkbox" name="pericias" value="Interação com nobres"> Interação com nobres</label>
+                        <label><input type="checkbox" name="pericias" value="Interação com criminosos"> Interação com criminosos</label>
+                        <label><input type="checkbox" name="pericias" value="Interação com autoridades"> Interação com autoridades</label>
+                        <label><input type="checkbox" name="pericias" value="Conhecimento de rumores"> Conhecimento de rumores</label>
+                        <label><input type="checkbox" name="pericias" value="Lábia"> Lábia</label>
+
+                    </div>
+
+                </div>
+
+
+                <div class="acoes-etapa">
+
+                    <button
+                        class="btn-voltar"
+                        onclick="irParaEtapa4()">
+
+                        ← Voltar
+
+                    </button>
+
+
+                    <button
+                        class="btn-proximo"
+                        onclick="irParaEtapa6()">
+
+                        Continuar
+
+                        <span>
+                            →
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- =============================================
+                 ETAPA 6 — COMBATE
+            ============================================== -->
+
+            <div class="etapa-conteudo" id="etapa6">
+
+                <div class="titulo-etapa">
+
+                    <span class="numero-etapa">
+                        06
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            Combate
+                        </h2>
+
+                        <p>
+                            Prepare seu personagem para os confrontos.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="campo-ficha">
+
+                    <label for="armaPrincipal">
+                        Arma principal
+                    </label>
+
+                    <input
+                        type="text"
+                        id="armaPrincipal"
+                        class="input-ficha"
+                        placeholder="Ex.: Espada longa">
+
+                </div>
+
+
+                <div class="campos-duplos">
+
+                    <div class="campo-ficha">
+
+                        <label for="ataque">
+                            Ataque
+                        </label>
+
+                        <input
+                            type="text"
+                            id="ataque"
+                            class="input-ficha"
+                            placeholder="Valor ou bônus">
+
+                    </div>
+
+
+                    <div class="campo-ficha">
+
+                        <label for="dano">
+                            Dano
+                        </label>
+
+                        <input
+                            type="text"
+                            id="dano"
+                            class="input-ficha"
+                            placeholder="Ex.: 1d8 + 3">
+
+                    </div>
+
+                </div>
+
+
+                <div class="campo-ficha">
+
+                    <label for="armadura">
+                        Armadura
+                    </label>
+
+                    <input
+                        type="text"
+                        id="armadura"
+                        class="input-ficha"
+                        placeholder="Armadura utilizada">
+
+                </div>
+
+
+                <div class="campos-duplos">
+
+                    <div class="campo-ficha">
+
+                        <label for="resistencias">
+                            Resistências
+                        </label>
+
+                        <textarea
+                            id="resistencias"
+                            class="input-ficha textarea-ficha"
+                            placeholder="Resistências do personagem"></textarea>
+
+                    </div>
+
+
+                    <div class="campo-ficha">
+
+                        <label for="fraquezas">
+                            Fraquezas
+                        </label>
+
+                        <textarea
+                            id="fraquezas"
+                            class="input-ficha textarea-ficha"
+                            placeholder="Fraquezas do personagem"></textarea>
+
+                    </div>
+
+                </div>
+
+
+                <div class="acoes-etapa">
+
+                    <button
+                        class="btn-voltar"
+                        onclick="irParaEtapa5()">
+
+                        ← Voltar
+
+                    </button>
+
+
+                    <button
+                        class="btn-proximo"
+                        onclick="irParaEtapa7()">
+
+                        Continuar
+
+                        <span>
+                            →
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- =============================================
+                 ETAPA 7 — HABILIDADES / PODERES
+            ============================================== -->
+
+            <div class="etapa-conteudo" id="etapa7">
+
+                <div class="titulo-etapa">
+
+                    <span class="numero-etapa">
+                        07
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            Habilidades e poderes
+                        </h2>
+
+                        <p>
+                            Adicione três ou mais habilidades de acordo com a classe e a raça.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div id="habilidades-container">
+
+
+                    <!-- Habilidade 1 -->
+
+                    <div class="habilidade-card">
+
+                        <div class="habilidade-titulo">
+
+                            <span>
+                                ✦ Habilidade 1
+                            </span>
+
+                        </div>
+
+
+                        <div class="campo-ficha">
+
+                            <label>
+                                Nome
+                            </label>
+
+                            <input
+                                type="text"
+                                name="habilidadeNome[]"
+                                class="input-ficha"
+                                placeholder="Nome da habilidade">
+
+                        </div>
+
+
+                        <div class="campo-ficha">
+
+                            <label>
+                                Descrição
+                            </label>
+
+                            <textarea
+                                name="habilidadeDescricao[]"
+                                class="input-ficha textarea-ficha"
+                                placeholder="Descreva a habilidade"></textarea>
+
+                        </div>
+
+
+                        <div class="campos-duplos">
+
+                            <div class="campo-ficha">
+
+                                <label>
+                                    Tipo
+                                </label>
+
+                                <select
+                                    name="habilidadeTipo[]"
+                                    class="input-ficha">
+
+                                    <option value="">
+                                        Selecione
+                                    </option>
+
+                                    <option value="passiva">
+                                        Passiva
+                                    </option>
+
+                                    <option value="ativa">
+                                        Ativa
+                                    </option>
+
+                                    <option value="reacao">
+                                        Reação
+                                    </option>
+
+                                    <option value="outro">
+                                        Outro
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="campo-ficha">
+
+                                <label>
+                                    Custo
+                                </label>
+
+                                <input
+                                    type="text"
+                                    name="habilidadeCusto[]"
+                                    class="input-ficha"
+                                    placeholder="Ex.: 10 Mana">
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="campos-duplos">
+
+                            <div class="campo-ficha">
+
+                                <label>
+                                    Alcance
+                                </label>
+
+                                <input
+                                    type="text"
+                                    name="habilidadeAlcance[]"
+                                    class="input-ficha"
+                                    placeholder="Ex.: 10 metros">
+
+                            </div>
+
+
+                            <div class="campo-ficha">
+
+                                <label>
+                                    Duração
+                                </label>
+
+                                <input
+                                    type="text"
+                                    name="habilidadeDuracao[]"
+                                    class="input-ficha"
+                                    placeholder="Ex.: 1 minuto">
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="campos-duplos">
+
+                            <div class="campo-ficha">
+
+                                <label>
+                                    Tempo de recarga
+                                </label>
+
+                                <input
+                                    type="text"
+                                    name="habilidadeRecarga[]"
+                                    class="input-ficha"
+                                    placeholder="Se houver">
+
+                            </div>
+
+
+                            <div class="campo-ficha">
+
+                                <label>
+                                    Dano / Efeito
+                                </label>
+
+                                <input
+                                    type="text"
+                                    name="habilidadeEfeito[]"
+                                    class="input-ficha"
+                                    placeholder="Descreva o efeito">
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="campo-ficha">
+
+                            <label>
+                                Condições para usar
+                            </label>
+
+                            <textarea
+                                name="habilidadeCondicoes[]"
+                                class="input-ficha textarea-ficha"
+                                placeholder="Condições necessárias para utilizar"></textarea>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="btn-adicionar"
+                    id="btnAdicionarHabilidade">
+
+                    ＋ Adicionar habilidade
+
+                </button>
+
+
+                <div class="acoes-etapa">
+
+                    <button
+                        class="btn-voltar"
+                        onclick="irParaEtapa6()">
+
+                        ← Voltar
+
+                    </button>
+
+
+                    <button
+                        class="btn-proximo"
+                        onclick="irParaEtapa8()">
+
+                        Continuar
+
+                        <span>
+                            →
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- =============================================
+                 ETAPA 8 — EQUIPAMENTOS
+            ============================================== -->
+
+            <div class="etapa-conteudo" id="etapa8">
+
+                <div class="titulo-etapa">
+
+                    <span class="numero-etapa">
+                        08
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            Equipamentos
+                        </h2>
+
+                        <p>
+                            Prepare tudo que seu personagem levará para a aventura.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="campo-ficha">
+
+                    <label for="equipArmas">
+                        Armas
+                    </label>
+
+                    <textarea
+                        id="equipArmas"
+                        class="input-ficha textarea-ficha"
+                        placeholder="Liste as armas do personagem"></textarea>
+
+                </div>
+
+
+                <div class="campo-ficha">
+
+                    <label for="equipArmadura">
+                        Armadura
+                    </label>
+
+                    <textarea
+                        id="equipArmadura"
+                        class="input-ficha textarea-ficha"
+                        placeholder="Liste a armadura utilizada"></textarea>
+
+                </div>
+
+
+                <div class="campo-ficha">
+
+                    <label for="equipItens">
+                        Itens
+                    </label>
+
+                    <textarea
+                        id="equipItens"
+                        class="input-ficha textarea-ficha"
+                        placeholder="Outros itens importantes"></textarea>
+
+                </div>
+
+
+                <div class="campo-ficha">
+
+                    <label for="equipPocoes">
+                        Poções
+                    </label>
+
+                    <textarea
+                        id="equipPocoes"
+                        class="input-ficha textarea-ficha"
+                        placeholder="Poções e consumíveis"></textarea>
+
+                </div>
+
+
+                <div class="campo-ficha">
+
+                    <label for="dinheiro">
+                        Dinheiro
+                    </label>
+
+                    <input
+                        type="text"
+                        id="dinheiro"
+                        class="input-ficha"
+                        placeholder="Ex.: 50 moedas de ouro">
+
+                </div>
+
+
+                <div class="acoes-etapa">
+
+                    <button
+                        class="btn-voltar"
+                        onclick="irParaEtapa7()">
+
+                        ← Voltar
+
+                    </button>
+
+
+                    <button
+                        class="btn-proximo"
+                        onclick="irParaEtapa9()">
+
+                        Continuar
+
+                        <span>
+                            →
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- =============================================
+                 ETAPA 9 — PERSONALIDADE
+            ============================================== -->
+
+            <div class="etapa-conteudo" id="etapa9">
+
+                <div class="titulo-etapa">
+
+                    <span class="numero-etapa">
+                        09
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            Personalidade
+                        </h2>
+
+                        <p>
+                            Dê mais profundidade ao seu personagem.
+                        </p>
+
+                        <span class="etapa-opcional">
+                            ✦ Esta etapa é opcional
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="campo-ficha">
+
+                    <label for="qualidades">
+                        Qualidades
+                    </label>
+
+                    <textarea
+                        id="qualidades"
+                        class="input-ficha textarea-ficha"
+                        placeholder="Quais são as qualidades do personagem?"></textarea>
+
+                </div>
+
+
+                <div class="campo-ficha">
+
+                    <label for="defeitos">
+                        Defeitos
+                    </label>
+
+                    <textarea
+                        id="defeitos"
+                        class="input-ficha textarea-ficha"
+                        placeholder="Quais são seus defeitos?"></textarea>
+
+                </div>
+
+
+                <div class="campo-ficha">
+
+                    <label for="medos">
+                        Medos
+                    </label>
+
+                    <textarea
+                        id="medos"
+                        class="input-ficha textarea-ficha"
+                        placeholder="Do que o personagem tem medo?"></textarea>
+
+                </div>
+
+
+                <div class="campo-ficha">
+
+                    <label for="objetivos">
+                        Objetivos
+                    </label>
+
+                    <textarea
+                        id="objetivos"
+                        class="input-ficha textarea-ficha"
+                        placeholder="Quais são seus objetivos?"></textarea>
+
+                </div>
+
+
+                <div class="campo-ficha">
+
+                    <label for="gostos">
+                        Gostos
+                    </label>
+
+                    <textarea
+                        id="gostos"
+                        class="input-ficha textarea-ficha"
+                        placeholder="O que o personagem gosta?"></textarea>
+
+                </div>
+
+
+                <div class="campo-ficha">
+
+                    <label for="desgostos">
+                        Desgostos
+                    </label>
+
+                    <textarea
+                        id="desgostos"
+                        class="input-ficha textarea-ficha"
+                        placeholder="O que o personagem não gosta?"></textarea>
+
+                </div>
+
+
+                <div class="acoes-etapa">
+
+                    <button
+                        class="btn-voltar"
+                        onclick="irParaEtapa8()">
+
+                        ← Voltar
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="btn-pular"
+                        onclick="pularParaEtapa10()">
+
+                        Pular etapa
+
+                    </button>
+
+
+                    <button
+                        class="btn-proximo"
+                        onclick="irParaEtapa10()">
+
+                        Continuar
+
+                        <span>
+                            →
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- =============================================
+                 ETAPA 10 — HISTÓRIA
+            ============================================== -->
+
+            <div class="etapa-conteudo" id="etapa10">
+
+                <div class="titulo-etapa">
+
+                    <span class="numero-etapa">
+                        10
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            História
+                        </h2>
+
+                        <p>
+                            Conte a história que trouxe seu personagem até aqui.
+                        </p>
+
+                        <span class="etapa-opcional">
+                            ✦ Esta etapa é opcional
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="campo-ficha">
+
+                    <label for="historiaPersonagem">
+                        História do personagem
+                    </label>
+
+                    <textarea
+                        id="historiaPersonagem"
+                        class="input-ficha textarea-historia"
+                        placeholder="Escreva aqui a história do seu personagem..."></textarea>
+
+                </div>
+
+
+                <div class="acoes-etapa">
+
+                    <button
+                        class="btn-voltar"
+                        onclick="irParaEtapa9()">
+
+                        ← Voltar
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="btn-pular"
+                        onclick="pularParaEtapa11()">
+
+                        Pular etapa
+
+                    </button>
+
+
+                    <button
+                        class="btn-proximo"
+                        onclick="irParaEtapa11()">
+
+                        Continuar
+
+                        <span>
+                            →
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- =============================================
+                 ETAPA 11 — RELACIONAMENTOS E ANOTAÇÕES
+            ============================================== -->
+
+            <div class="etapa-conteudo" id="etapa11">
+
+                <div class="titulo-etapa">
+
+                    <span class="numero-etapa">
+                        11
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            Relacionamentos
+                        </h2>
+
+                        <p>
+                            Registre as pessoas importantes na vida do personagem.
+                        </p>
+
+                        <span class="etapa-opcional">
+                            ✦ Esta etapa é opcional
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Aliados -->
+
+                <div class="campo-ficha">
+
+                    <label for="aliados">
+                        Aliados
+                    </label>
+
+                    <textarea
+                        id="aliados"
+                        class="input-ficha textarea-ficha"
+                        placeholder="Quem são os aliados do personagem?"></textarea>
+
+                </div>
+
+
+                <!-- Inimigos -->
+
+                <div class="campo-ficha">
+
+                    <label for="inimigos">
+                        Inimigos
+                    </label>
+
+                    <textarea
+                        id="inimigos"
+                        class="input-ficha textarea-ficha"
+                        placeholder="Quem são seus inimigos?"></textarea>
+
+                </div>
+
+
+                <!-- Família -->
+
+                <div class="campo-ficha">
+
+                    <label for="familia">
+                        Família
+                    </label>
+
+                    <textarea
+                        id="familia"
+                        class="input-ficha textarea-ficha"
+                        placeholder="Descreva a família do personagem"></textarea>
+
+                </div>
+
+
+                <!-- =================================================
+                     ANOTAÇÕES
+                ================================================== -->
+
+                <div class="subtitulo-ficha">
+
+                    <span>
+                        ✦
+                    </span>
+
+                    <h3>
+                        Anotações
+                    </h3>
+
+                </div>
+
+
+                <p class="descricao-campo">
+                    Use este espaço para registrar qualquer informação adicional.
+                </p>
+
+
+                <div class="campo-ficha">
+
+                    <label for="anotacoes">
+                        Anotações adicionais
+                    </label>
+
+                    <textarea
+                        id="anotacoes"
+                        class="input-ficha textarea-historia"
+                        placeholder="Escreva qualquer informação importante sobre o personagem..."></textarea>
+
+                </div>
+
+
+                <div class="acoes-etapa">
+
+                    <button
+                        class="btn-voltar"
+                        onclick="irParaEtapa10()">
+
+                        ← Voltar
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="btn-pular"
+                        onclick="finalizarFicha()">
+
+                        Pular e finalizar
+
+                    </button>
+
+
+                    <button
+                        class="btn-proximo"
+                        onclick="finalizarFicha()">
+
+                        Finalizar ficha
+
+                        <span>
+                            ✓
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
 
         </section>
 
