@@ -1,8 +1,8 @@
 
 const firebaseConfig = {
-    apiKey: "AIzaSyD1tRtZYYnleMWUXkJF9n7E1FIcAt5Fgzc",
-    authDomain: "professorjackson-f41a2.firebaseapp.com",
-    projectId: "professorjackson-f41a2",
+  apiKey: "AIzaSyDaTySb9_wtiR20dLgRvZVYTBYD5Vw-W1c",
+  authDomain: "cappurpg.firebaseapp.com",
+  projectId: "cappurpg",
 };
 firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
