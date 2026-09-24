@@ -30,119 +30,48 @@
     ====================================================== -->
 
     <nav class="navbar-cappu">
-
         <div class="navbar-container">
-
             <!-- Logo -->
-
             <a href="index.html" class="logo">
-
                 <div class="logo-gato">
                     🐈‍⬛
                 </div>
-
                 <span>CappuRPG</span>
-
             </a>
-
 
             <!-- Menu -->
 
             <div class="menu">
-
-                <a href="index.html">
-                    Início
-                </a>
-
-                <a href="explorar.html">
-                    Explorar
-                </a>
-
-                <a href="fichas.html" class="ativo">
-                    Fichas
-                </a>
-
-                <a href="comunidade.html">
-                    Comunidade
-                </a>
-
+                <a href="index.html"> Início </a>
+                <a href="explorar.html"> Explorar </a>
+                <a href="fichas.html" class="ativo"> Fichas </a>
+                <a href="comunidade.html"> Comunidade </a>
             </div>
-
 
             <!-- Ações -->
 
             <div class="acoes-navbar">
-
-                <button
-                    class="icone-navbar"
-                    title="Pesquisar"
-                    onclick="window.location.href='explorar.html'">
-
-                    🔍
-
-                </button>
-
-
-                <button class="icone-navbar" title="Notificações">
-
-                    ♧
-
-                </button>
-
+                <button class="icone-navbar" title="Pesquisar" onclick="window.location.href='explorar.html'"> 🔍 </button>
+                <button class="icone-navbar" title="Notificações"> ♧ </button>
 
                 <!-- Admin -->
 
-                <button
-                    class="btn btn-sm btn-outline-light d-none"
-                    id="btn-admin"
-                    onclick="window.location.href='admin.html'">
-
-                    Admin
-
-                </button>
-
+                <button class="btn btn-sm btn-outline-light d-none" id="btn-admin" onclick="window.location.href='admin.html'"> Admin </button>
 
                 <!-- Login -->
 
-                <button
-                    class="btn btn-sm btn-outline-light"
-                    id="btn-login"
-                    onclick="abrirLogin()">
-
-                    Entrar
-
-                </button>
-
+                <button class="btn btn-sm btn-outline-light" id="btn-login" onclick="abrirLogin()"> Entrar </button>
 
                 <!-- Logout -->
 
-                <button
-                    class="btn btn-sm btn-outline-light d-none"
-                    id="btn-logout"
-                    onclick="logout()">
-
-                    Sair
-
-                </button>
-
+                <button class="btn btn-sm btn-outline-light d-none" id="btn-logout" onclick="logout()"> Sair </button>
 
                 <!-- Perfil -->
 
-                <a
-                    href="perfil.html"
-                    class="avatar"
-                    title="Meu perfil">
-
-                    🐈
-
-                </a>
-
+                <a href="perfil.html" class="avatar" title="Meu perfil"> 🐈 </a>
             </div>
-
         </div>
-
     </nav>
-
 
     <!-- =====================================================
          CONTEÚDO
@@ -150,14 +79,12 @@
 
     <main class="pagina-fichas">
 
-
         <!-- Decoração -->
 
         <span class="decoracao estrela-1">✦</span>
         <span class="decoracao estrela-2">✧</span>
         <span class="decoracao estrela-3">✦</span>
         <span class="decoracao estrela-4">✧</span>
-
         <span class="lua-decorativa">☾</span>
 
 
@@ -166,30 +93,19 @@
         ================================================== -->
 
         <section class="cabecalho-fichas">
-
             <div class="icone-cabecalho">
                 🎲
             </div>
 
             <div>
+                <span class="pequeno-titulo"> NOVA AVENTURA </span>
 
-                <span class="pequeno-titulo">
-                    NOVA AVENTURA
-                </span>
+                <h1> Crie sua ficha </h1>
 
-                <h1>
-                    Crie sua ficha
-                </h1>
-
-                <p>
-                    Dê vida ao seu personagem e prepare-se
-                    para a próxima aventura.
-                </p>
-
+                <p> Dê vida ao seu personagem e prepare-se
+                    para a próxima aventura. </p>
             </div>
-
         </section>
-
 
         <!-- =================================================
              INDICADOR DE ETAPAS
@@ -198,17 +114,13 @@
         <div class="progresso">
 
             <div class="etapa ativa" id="indicador1">
-
                 <span>1</span>
-
                 <div>
                     <strong>Sistema</strong>
                     <small>Escolha seu RPG</small>
                 </div>
 
-
             </div>
-
 
             <div class="linha-progresso"></div>
 
@@ -404,7 +316,6 @@
                     <!-- D&D -->
 
                     <label class="sistema-card">
-
                         <input type="radio" name="sistema" value="D&D 5e">
 
                         <div class="sistema-conteudo">
@@ -414,97 +325,49 @@
                             </div>
 
                             <div>
-
-                                <h3>
-                                    D&D
-                                </h3>
-
-                                <p>
-                                    Dungeons & Dragons
-                                </p>
-
+                                <h3> D&D </h3>
+                                <p> Dungeons & Dragons </p>
                             </div>
-
-                            <span class="check-sistema">
-                                ✓
-                            </span>
-
+                            <span class="check-sistema"> ✓ </span>
                         </div>
-
                     </label>
-
 
                     <!-- Tormenta -->
 
-                    <label class="sistema-card">
+                    <label clss="sistema-card">
 
-                        <input
-                            type="radio"
-                            name="sistema"
-                            value="Tormenta20">
-
+                        <input type="radio" name="sistema" value="Tormenta20">
                         <div class="sistema-conteudo">
-
                             <div class="sistema-icone">
                                 🐉
                             </div>
 
                             <div>
-
-                                <h3>
-                                    Tormenta20
-                                </h3>
-
-                                <p>
-                                    Aventuras em Arton
-                                </p>
-
+                                <h3> Tormenta20 </h3>
+                                <p> Aventuras em Arton </p>
                             </div>
 
-                            <span class="check-sistema">
-                                ✓
-                            </span>
-
+                            <span class="check-sistema"> ✓ </span>
                         </div>
 
                     </label>
 
-
                     <!-- Ordem -->
 
                     <label class="sistema-card">
-
-                        <input
-                            type="radio"
-                            name="sistema"
-                            value="Ordem Paranormal">
-
+                        <input type="radio" name="sistema" value="Ordem Paranormal">
                         <div class="sistema-conteudo">
-
                             <div class="sistema-icone">
                                 👁️
                             </div>
 
                             <div>
-
-                                <h3>
-                                    Ordem Paranormal
-                                </h3>
-
-                                <p>
-                                    O Outro Lado
-                                </p>
-
+                                <h3> Ordem Paranormal </h3>
+                                <p> O Outro Lado </p>
                             </div>
-
-                            <span class="check-sistema">
-                                ✓
-                            </span>
-
+                            <span class="check-sistema"> ✓ </span>
                         </div>
-
                     </label>
-
 
                     <!-- Outro -->
 <label class="sistema-card">
@@ -557,36 +420,14 @@
 
     </div>
 
-    <button
-        type="button"
-        class="btn-criar-sistema"
-        onclick="criarNovoSistema()"
-    >
-        <span>＋</span>
-        Criar sistema
-    </button>
+    <button type="button" class="btn-criar-sistema" onclick="criarNovoSistema()"><span>＋</span> Criar sistema </button>
 
 </div>
 
                 </div>
-
-
                 <div class="acoes-etapa">
-
-                    <button
-                        class="btn-proximo"
-                        onclick="irParaEtapa2()">
-
-                        Continuar
-
-                        <span>
-                            →
-                        </span>
-
-                    </button>
-
+                    <button class="btn-proximo" onclick="irParaEtapa2()"> Continuar <span> → </span></button>
                 </div>
-
             </div>
 
 
