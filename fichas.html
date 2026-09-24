@@ -51,7 +51,7 @@
             <div class="menu">
 
                 <a href="index.html">
-                    🏠 Início
+                    Início
                 </a>
 
                 <a href="explorar.html">
@@ -83,9 +83,7 @@
                 </button>
 
 
-                <button
-                    class="icone-navbar"
-                    title="Notificações">
+                <button class="icone-navbar" title="Notificações">
 
                     ♧
 
@@ -207,6 +205,7 @@
                     <strong>Sistema</strong>
                     <small>Escolha seu RPG</small>
                 </div>
+
 
             </div>
 
@@ -406,10 +405,7 @@
 
                     <label class="sistema-card">
 
-                        <input
-                            type="radio"
-                            name="sistema"
-                            value="D&D 5e">
+                        <input type="radio" name="sistema" value="D&D 5e">
 
                         <div class="sistema-conteudo">
 
@@ -511,39 +507,66 @@
 
 
                     <!-- Outro -->
+<label class="sistema-card">
+    <input
+        type="radio"
+        name="sistema"
+        value="Outro"
+        id="sistemaOutro"
+        onchange="mostrarOutrosSistemas()"
+    >
 
-                    <label class="sistema-card">
+    <div class="sistema-conteudo">
+        <div class="sistema-icone">
+            ✨
+        </div>
 
-                        <input
-                            type="radio"
-                            name="sistema"
-                            value="Outro">
+        <div class="sistema-info">
+            <h3>Outro sistema</h3>
+            <p>Escolha um sistema salvo ou crie o seu próprio.</p>
+        </div>
 
-                        <div class="sistema-conteudo">
+        <div class="check-sistema">✓</div>
+    </div>
+</label>
 
-                            <div class="sistema-icone">
-                                ✨
-                            </div>
+<!-- SISTEMAS DO LEITOR -->
+<div id="outrosSistemasContainer" class="outros-sistemas-container">
 
-                            <div>
+    <div class="outros-sistemas-cabecalho">
+        <div>
+            <span class="outros-sistemas-tag">SEUS SISTEMAS</span>
+            <h3>Sistemas salvos</h3>
+            <p>
+                Escolha um dos seus sistemas ou crie um novo.
+            </p>
+        </div>
+    </div>
 
-                                <h3>
-                                    Outro sistema
-                                </h3>
+    <div id="listaSistemasUsuario" class="lista-sistemas-usuario">
 
-                                <p>
-                                    Escolher outro RPG
-                                </p>
+        <!--
+            Os sistemas do leitor serão carregados aqui
+            futuramente pelo fichas.js.
+        -->
 
-                            </div>
+        <div class="sem-sistemas">
+            <span>📚</span>
+            <p>Você ainda não possui sistemas salvos.</p>
+        </div>
 
-                            <span class="check-sistema">
-                                ✓
-                            </span>
+    </div>
 
-                        </div>
+    <button
+        type="button"
+        class="btn-criar-sistema"
+        onclick="criarNovoSistema()"
+    >
+        <span>＋</span>
+        Criar sistema
+    </button>
 
-                    </label>
+</div>
 
                 </div>
 

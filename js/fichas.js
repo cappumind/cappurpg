@@ -89,10 +89,32 @@ const ficha = {
     anotacoes: ""
 };
 
-
 /* =====================================================
-   ETAPA 1 → ETAPA 2
+   OUTRO SISTEMA
 ===================================================== */
+
+function mostrarOutrosSistemas() {
+    const sistema = document.querySelector(
+        'input[name="sistema"]:checked'
+    );
+    const container = document.getElementById(
+        "outrosSistemasContainer"
+    );
+    if (!container || !sistema) {
+        return;
+    }
+    if (sistema.value === "Outro") {
+        container.classList.add("visivel");
+        carregarSistemasUsuario();
+    } else {
+        container.classList.remove("visivel");
+        limparSistemaUsuarioSelecionado();
+    }
+}
+
+function criarNovoSistema() {
+    window.location.href = "criar-sistema.html";
+}
 
 function irParaEtapa2() {
 
@@ -107,14 +129,49 @@ function irParaEtapa2() {
         return;
     }
 
-    sistemaSelecionado = sistema.value;
+    /* =================================================
+       SISTEMAS PRÓPRIOS
+    ================================================= */
 
-    ficha.sistema = sistemaSelecionado;
+    if (sistema.value === "Outro") {
+
+        const sistemaUsuario =
+            document.querySelector(
+                'input[name="sistemaUsuario"]:checked'
+            );
+
+        if (!sistemaUsuario) {
+
+            alert(
+                "Escolha um dos seus sistemas salvos ou crie um novo sistema."
+            );
+
+            return;
+        }
+
+        sistemaSelecionado =
+            sistemaUsuario.value;
+
+    } else {
+
+        sistemaSelecionado =
+            sistema.value;
+    }
+
+    /* =================================================
+       SALVA O SISTEMA ESCOLHIDO
+    ================================================= */
+
+    ficha.sistema =
+        sistemaSelecionado;
 
     const sistemaEscolhido =
-        document.getElementById("sistemaEscolhido");
+        document.getElementById(
+            "sistemaEscolhido"
+        );
 
     if (sistemaEscolhido) {
+
         sistemaEscolhido.textContent =
             sistemaSelecionado;
     }

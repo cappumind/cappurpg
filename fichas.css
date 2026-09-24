@@ -1123,3 +1123,192 @@ body {
     }
 
 }
+
+/* =====================================================
+   OUTROS SISTEMAS
+===================================================== */
+
+.outros-sistemas-container {
+    display: none;
+    margin-top: 24px;
+    padding: 24px;
+    background: #fcf9f4;
+    border: 1px solid #ded3e8;
+    border-radius: 18px;
+    animation: aparecerSistema 0.25s ease;
+}
+
+.outros-sistemas-container.visivel {
+    display: block;
+}
+
+.outros-sistemas-cabecalho {
+    margin-bottom: 18px;
+}
+
+.outros-sistemas-tag {
+    display: inline-block;
+    margin-bottom: 6px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #72509a;
+}
+
+.outros-sistemas-cabecalho h3 {
+    margin: 0;
+    color: #25164b;
+    font-family: "Playfair Display", serif;
+    font-size: 1.5rem;
+}
+
+.outros-sistemas-cabecalho p {
+    margin: 6px 0 0;
+    color: #6f6578;
+}
+
+/* Lista dos sistemas salvos */
+
+.lista-sistemas-usuario {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    margin-bottom: 18px;
+}
+
+.sistema-usuario-card {
+    position: relative;
+    cursor: pointer;
+}
+
+.sistema-usuario-card input {
+    display: none;
+}
+
+.sistema-usuario-conteudo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-height: 75px;
+    padding: 15px;
+    border: 1px solid #ded3e8;
+    border-radius: 14px;
+    background: #fffdf9;
+    transition: 0.2s ease;
+}
+
+.sistema-usuario-conteudo:hover {
+    border-color: #72509a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(37, 22, 75, 0.08);
+}
+
+.sistema-usuario-card input:checked
++ .sistema-usuario-conteudo {
+    border: 2px solid #72509a;
+    background: #f2eafa;
+}
+
+.sistema-usuario-icone {
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background: #72509a;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.sistema-usuario-info h4 {
+    margin: 0;
+    color: #25164b;
+    font-size: 1rem;
+}
+
+.sistema-usuario-info p {
+    margin: 3px 0 0;
+    color: #7a7083;
+    font-size: 0.85rem;
+}
+
+/* Quando não houver sistemas */
+
+.sem-sistemas {
+    padding: 20px;
+    text-align: center;
+    border: 1px dashed #d7c9e1;
+    border-radius: 14px;
+    color: #756a7d;
+}
+
+.sem-sistemas span {
+    display: block;
+    font-size: 1.7rem;
+    margin-bottom: 5px;
+}
+
+.sem-sistemas p {
+    margin: 0;
+}
+
+/* Botão criar sistema */
+
+.btn-criar-sistema {
+    width: 100%;
+    min-height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    border: 1px dashed #72509a;
+    border-radius: 12px;
+
+    background: transparent;
+    color: #72509a;
+
+    font-family: "DM Sans", sans-serif;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.btn-criar-sistema:hover {
+    background: #f2eafa;
+    transform: translateY(-1px);
+}
+
+.btn-criar-sistema span {
+    font-size: 1.3rem;
+}
+
+/* Animação */
+
+@keyframes aparecerSistema {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividade */
+
+@media (max-width: 900px) {
+
+    .lista-sistemas-usuario {
+        grid-template-columns: 1fr;
+    }
+
+}
